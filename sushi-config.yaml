@@ -15,7 +15,9 @@ publisher:
   name: "Pétur Valdimarsson"
   url: https://omnivore.se
 dependencies:
-  se-baseprofile: current
+  se-baseprofile:
+    uri: http://hl7.se/fhir/ig/base
+    version: current
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
