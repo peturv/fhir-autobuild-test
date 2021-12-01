@@ -1,0 +1,44 @@
+{
+  "name": "wdx",
+  "version": "1.0.0",
+  "author": "Pétur Þór Valdimarsson <petur.valdimarsson@chorus.se>",
+  "canonical": "https://www.se.com/fhir",
+  "url": "https://www.se.com/fhir",
+  "title": "",
+  "description": "",
+  "language": [
+    "en"
+  ],
+  "maintainers": [
+    {
+      "name": "Pétur Þór Valdimarsson",
+      "url": "https://www.se.com/fhir",
+      "email": "petur.valdimarsson@chorus.se"
+    }
+  ],
+  "private": true,
+  "scripts": {
+    "serve": "http-server output",
+    "build": "yarn generate && yarn ig",
+    "refresh": "yarn fsh && yarn ig",
+    "rebuild": "yarn clean:all && yarn generate && yarn pre:getPublisher && yarn ig",
+    "generate": "yarn clean:temp && yarn clean:output && yarn clean:generated  && yarn fsh",
+    "ig": "./_genonce.sh",
+    "fsh": "node ./node_modules/fsh-sushi/dist/app.js ./",
+    "deploy": "yarn refresh && yarn docker",
+    "clean:all": "yarn clean:temp && yarn clean:output && yarn clean:cache && yarn clean:generated && yarn clean:template",
+    "clean:temp": "rm -rf temp || true",
+    "clean:output": "rm -rf output || true",
+    "clean:cache": "rm -rf input-cache || true",
+    "clean:generated": "rm -rf fsh-generated || true",
+    "clean:template": "rm -rf template || true",
+    "pre:getPublisher": "./_updatePublisher.sh -y"
+  },
+  "dependencies": {
+    "fsh-sushi": "^2.0.1",
+    "http-server": "^13.0.2"
+  },
+  "keywords": [],
+  "canonicals": null,
+  "license": "SEE LICENSE IN LICENSE"
+}
