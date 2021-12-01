@@ -4,7 +4,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: omnivore-autobuild-test
 canonical: https://omnivore.se/test/fhir
-name: Omnivore.se test build
+name: "Omnivore.se test build"
 status: active
 version: 1.0.0
 fhirVersion: 4.0.1
@@ -12,7 +12,7 @@ copyrightYear: 2021+
 releaseLabel: ci-build
 license: CC0-1.0
 publisher:
-  name: Pétur Valdimarsson
+  name: "Pétur Valdimarsson"
   url: https://omnivore.se
 dependencies:
   se-baseprofile: dev
