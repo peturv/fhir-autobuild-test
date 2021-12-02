@@ -14,10 +14,16 @@ license: CC0-1.0
 publisher:
   name: "Pétur Valdimarsson"
   url: https://omnivore.se
-dependencies:
-  se-baseprofile:
-    uri: http://hl7.se/fhir/ig/base
-    version: current
+
+# TODO: For the dependency mechanism to work properly, the guide we are dependent on must fulfil one of the following:
+# * Have a package name with a period, i.e. 'se.baseprofile', AND having been built on the build.fhir.org build server
+# * Formally published on packages.fhir.org
+
+# dependencies:
+#   se-baseprofile:
+#     id: se-baseprofile
+#     uri: http://hl7.se/fhir/ig/base
+#     version: "file:deps/se-baseprofile#0.5.0"
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
